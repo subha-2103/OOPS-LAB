@@ -1,18 +1,21 @@
-impart java until*;
+import java.util.*;
 class seven
 {
-static public void main(String[] args)throws Exception
-String input = new Scanner (system.in);
-String s1,s2;
-System.out.print("Enter First string");
-s1=input nextline ();
-System.out.print("Enter Second string");
-s2=input nextline ();
-if (s1==s2)
-}
-System.out.print("TWO STRING ARE EQUAL");
-}
-if(s1 !=s2)
+static public void main(String[]args)throws Exception
 {
-System.out.print("TWO STRING ARE NOT EQUAL");
-}}}
+Scanner input = new Scanner (System.in);
+String s1,s2;
+System.out.println("enter first string");
+s1=inputnextline();
+System.out.println("enter second string");
+s2=inputnextline();
+if(s1==s2)
+{
+System.out.println("TWO STRING ARE EQUAL");
+}
+if(s1!=s2)
+{
+System.out.println("TWO STRING ARE EQUAL");
+}
+}}
+
