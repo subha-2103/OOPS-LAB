@@ -1,0 +1,92 @@
+3
+PROGRAM TO EXPLORE STRING AND STRINGBUFFER METHODS
+12 Feb 2026
+
+
+AIM:
+To demonstrate the use of String and StringBuffer methods in Java using command-line arguments. 
+
+
+ALGORITHM;
+Step 1: Start the program.
+Step 2: Create a String variable and assign a value.
+Step 3: Apply String methods:
+Find length
+Convert to uppercase and lowercase
+Extract substring
+Compare strings
+Find index of character
+Step 4: Display all String results.
+Step 5: Create a StringBuffer object.
+Step 6: Apply StringBuffer methods:
+Append text
+Insert text
+Replace text
+Delete text
+Reverse string
+Step 7: Display all StringBuffer results.
+Step 8: Stop the program.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SOURCE CODE :
+package textops;
+pub package textops;
+public class StringBufferOperations {
+private String str;
+public StringBufferOperations(String str) {
+this.str = str;
+}
+public void exploreStringBufferMethods(String appendStr) {
+System.out.println("\n----- StringBuffer Methods -----");
+StringBuffer sb = new StringBuffer(str);
+System.out.println("Original StringBuffer: " + sb);
+sb.append(appendStr);
+System.out.println("After append: " + sb);
+sb.insert(0, "Start-");
+System.out.println("After insert: " + sb);
+sb.replace(0, 5, "Begin");
+System.out.println("After replace: " + sb);
+sb.delete(0, 6);
+System.out.println("After delete: " + sb);
+sb.reverse();
+System.out.println("After reverse: " + sb);
+System.out.println("Capacity: " + sb.capacity());
+System.out.println("Length: " + sb.length());
+}
+}lic class StringBufferOperations {
+private String str;
+public StringBufferOperations(String str) {
+this.str = str;
+}
+public void exploreStringBufferMethods(String appendStr) {
+System.out.println("\n----- StringBuffer Methods -----");
+StringBuffer sb = new StringBuffer(str);
+System.out.println("Original StringBuffer: " + sb);
+sb.append(appendStr);
+System.out.println("After append: " + sb);
+sb.insert(0, "Start-");
+System.out.println("After insert: " + sb);
+sb.replace(0, 5, "Begin");
+System.out.println("After replace: " + sb);
+sb.delete(0, 6);
+System.out.println("After delete: " + sb);
+sb.reverse();
+System.out.println("After reverse: " + sb);
+System.out.println("Capacity: " + sb.capacity());
+System.out.println("Length: " + sb.length());
+}
+}
