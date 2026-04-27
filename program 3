@@ -1,0 +1,81 @@
+             5
+PROGRAM TO EXPLORE BUILT IN EXCEPTIONS AND STATIC METHODS
+      26 Feb 2026
+
+
+AIM:
+           To demonstrate built-in exception handling and the use of static methods in Java.
+
+
+ALGORITHM:
+Step 1: Start the program.
+Step 2: Create a class.
+Step 3: Declare the main() method as static.
+Step 4: Declare required variables (int, array, string, etc.).
+Step 5: Call static methods using class name (e.g., Math.sqrt()), and display the result.
+Step 6: Begin a try block.
+Step 7: Write code that may cause ArithmeticException (division by zero).
+Step 8: Write code that may cause ArrayIndexOutOfBoundsException (invalid array index).
+Step 9: Write code that may cause NumberFormatException (invalid string conversion).
+Step 10: Add separate catch blocks for each exception.
+Step 11: Print error messages inside each catch block.
+Step 12: Add a finally block to display “Program Ended”.
+Step 13: Stop the program.
+
+
+
+SOURCE CODE: 
+public class ArithOp { 
+public static void add(int a, int b) { 
+int result = a + b; 
+System.out.println("Addition = " + result); 
+} 
+public static void sub(int a, int b) { 
+int result = a - b; 
+System.out.println("Subtraction = " + result); 
+} 
+public static void mul(int a, int b) { 
+int result = a * b; 
+System.out.println("Multiplication = " + result); 
+} 
+/** 
+* Performs division of two integers. 
+* Handles division by zero using try-catch. 
+* 
+* @param a Dividend 
+* @param b Divisor 
+*/ 
+public static void div(int a, int b) { 
+try { 
+// Attempt to divide a by b 
+int result = a / b; 
+System.out.println("Division = " + result); 
+} 
+catch (ArithmeticException e) { 
+// This block executes if b is zero 
+System.out.println("Error: Cannot divide by zero."); 
+} 
+finally { 
+// This block always executes regardless of exception 
+System.out.println("Division operation finished."); 
+} 
+} 
+}
+
+
+import java.util.Scanner; 
+public class Main { 
+public static void main(String[] args) { 
+Scanner sc = new Scanner(System.in); 
+System.out.print("Enter first number: "); 
+int num1 = sc.nextInt(); 
+System.out.print("Enter second number: "); 
+int num2 = sc.nextInt(); 
+// Call static methods directly using class name 
+ArithOp.add(num1, num2); 
+ArithOp.sub(num1, num2); 
+ArithOp.mul(num1, num2); 
+ArithOp.div(num1, num2); 
+sc.close(); 
+} 
+}
