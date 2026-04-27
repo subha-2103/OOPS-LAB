@@ -1,0 +1,170 @@
+6
+PROGRAM TO EXPLORE USER-DEFINED (CUSTOM) EXCEPTIONS
+      05 March 2026
+
+
+AIM:
+           To demonstrate custom exception in Java.
+
+ALGORITHM:
+Step 1: Start the program.
+Step 2: Create a user-defined exception class by extending Exception.
+Step 3: Define a constructor in the custom exception class to display an error message.
+Step 4: Create the main class.
+Step 5: Declare the main() method.
+Step 6: Declare required variables (e.g., age, number, etc.).
+Step 7: Use a try block.
+Step 8: Write a condition to check invalid input (e.g., age < 18).
+Step 9: If condition is true, use throw to throw the custom exception.
+Step 10: Otherwise, print a valid message.
+Step 11: Add a catch block to handle the custom exception.
+Step 12: Display the exception message in the catch block.
+Step 13: End the program.
+
+
+
+SOURCE CODE:
+// File: InvalidAgeException.java
+public class InvalidAgeException extends Exception {
+ public InvalidAgeException(String message) {
+ super(message);
+ }
+}
+// File: UserRegistration.java
+public class UserRegistration {
+ /**
+ * Logic and Validation moved here (The Calling Method)
+ */
+ public void processRegistration(String username, int age) {
+ System.out.println(">>> Processing registration for: " + username);
+
+ try {
+ // Validation Logic (Moved here per request)
+ if (age < 0) {
+ throw new InvalidAgeException("Age cannot be negative (" + age + ").");
+ }
+
+ if (username == null || username.trim().isEmpty()) {
+ throw new InvalidAgeException("Username is required.");
+ }
+ // If validation passes, call the registration/save action
+ registerUser(username, age);
+
+ System.out.println("STATUS: Success.");
+ } catch (InvalidAgeException e) {
+ // Handle Failure Scenario
+ System.err.println("STATUS: Failed - " + e.getMessage());
+ } finally {
+ System.out.println("Finalizing request...\n");
+ }
+ }
+ /**
+ * The simple action method
+ */
+ private void registerUser(String username, int age) {
+ System.out.println("System: Saving " + username + " (Age: " + age + ") to database.");
+ }
+}
+// File: Main.java
+public class Main {
+ public static void main(String[] args) {
+ UserRegistration app = new UserRegistration();
+ // Scenario 1: Valid
+ app.processRegistration("JavaExpert", 30);
+ // Scenario 2: Invalid Age
+ app.processRegistration("JuniorDev", -1);
+ // Scenario 3: Invalid Username
+ app.processRegistration("", 20);
+ }
+} System.out.println("Finalizing request...\n");
+ }
+ }
+ /**
+ * The simple action method
+ */
+ private void registerUser(String username, int age) {
+ System.out.println("System: Saving " + username + " (Age: " + age + ") to database.");
+ }
+}
+// File: Main.java
+public class Main {
+ public static void main(String[] args) {
+ UserRegistration app = new UserRegistration();
+ // Scenario 1: Valid
+ app.processRegistration("JavaExpert", 30);
+ // Scenario 2: Invalid Age
+ app.processRegistration("JuniorDev", -1);
+ // Scenario 3: Invalid Username
+ app.processRegistration("", 20);
+ }
+} } finally {
+ System.out.println("Finalizing request...\n");
+ }
+ }
+ /**
+ * The simple action method
+ */
+ private void registerUser(String username, int age) {
+ System.out.println("System: Saving " + username + " (Age: " + age + ") to database.");
+ }
+}
+// File: Main.java
+public class Main {
+ public static void main(String[] args) {
+ UserRegistration app = new UserRegistration();
+ // Scenario 1: Valid
+ app.processRegistration("JavaExpert", 30);
+ // Scenario 2: Invalid Age
+// File: InvalidAgeException.java
+public class InvalidAgeException extends Exception {
+ public InvalidAgeException(String message) {
+ super(message);
+ }
+}
+// File: UserRegistration.java
+public class UserRegistration {
+ /**
+ * Logic and Validation moved here (The Calling Method)
+ */
+ public void processRegistration(String username, int age) {
+ System.out.println(">>> Processing registration for: " + username);
+
+ try {
+ // Validation Logic (Moved here per request)
+ if (age < 0) {
+ throw new InvalidAgeException("Age cannot be negative (" + age + ").");
+ }
+
+ if (username == null || username.trim().isEmpty()) {
+ throw new InvalidAgeException("Username is required.");
+ }
+ // If validation passes, call the registration/save action
+ registerUser(username, age);
+
+ System.out.println("STATUS: Success.");
+ } catch (InvalidAgeException e) {
+ // Handle Failure Scenario
+ System.err.println("STATUS: Failed - " + e.getMessage());
+ } finally {
+ System.out.println("Finalizing request...\n");
+ }
+ }
+ /**
+ * The simple action method
+ */
+ private void registerUser(String username, int age) {
+ System.out.println("System: Saving " + username + " (Age: " + age + ") to database.");
+ }
+}
+// File: Main.java
+public class Main {
+ public static void main(String[] args) {
+ UserRegistration app = new UserRegistration();
+ // Scenario 1: Valid
+ app.processRegistration("JavaExpert", 30);
+ // Scenario 2: Invalid Age
+ app.processRegistration("JuniorDev", -1);
+ // Scenario 3: Invalid Username
+ app.processRegistration("", 20);
+ }
+}
